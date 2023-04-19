@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter a phone Number</p>
+    <input type="tel" id="phone" placeholder="111-444-7777">
+    <button>submit</button>
+
+    <script>
+        let regex = /^[0-9]{3}?[-]?[0-9]{3}?[-]?[0-9]{4}$/;
+        let btns = document.querySelectorAll('button');
+
+        btns[0].addEventListener('click', ()=>{
+            let value = document.getElementById('phone').value
+            if(regex.test(value)){
+                alert('valid!')
+            }
+            else{
+                alert('error!')
+            }
+        })
+        
+    </script>
+</body>
+</html>
